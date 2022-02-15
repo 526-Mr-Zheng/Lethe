@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>爱情纪录手册</title>
+
+<style>
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: normal 16px/1.5 'Titillium Web', sans-serif;
+  background: linear-gradient(54deg, #9164ff, #8bfff4);
+  color: #3c3f64;
+  overflow-x: hidden;
+  padding-bottom: 50px;
+}
+
+.timeline ul li {
+  list-style-type: none;
+  position: relative;
+  width: 6px;
+  margin: 0 auto;
+  padding-top: 50px;
+  background: #fff;
+}
+.timeline ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  background: #eee;
+}
+.timeline ul li div {
+  position: relative;
+  bottom: 0;
+  width: 400px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 4px 13px 30px 1px rgba(252, 56, 56, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.timeline ul li div time {
+  position: absolute;
+  background: #f5af19;
+  width: 80px;
+  height: 30px;
+  top: -15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 2px;
+}
+.timeline ul li div div {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.timeline ul li div div p {
+  text-align: center;
+}
+.timeline ul li div .discovery {
+  margin-right: 10px;
+}
+.timeline ul li:nth-of-type(odd) > div {
+  left: 45px;
+}
+.timeline ul li:nth-of-type(even) > div {
+  left: -439px;
+}
+
+.timeline ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.timeline ul li:nth-of-type(odd) div {
+  transform: translate3d(100px, -10px, 0) rotate(10deg);
+}
+.timeline ul li:nth-of-type(even) div {
+  transform: translate3d(-100px, -10px, 0) rotate(10deg);
+}
+.timeline ul li.in-view div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  .timeline ul li div {
+    width: 250px;
+    flex-direction: column;
+  }
+  .timeline ul li div div {
+    width: 80%;
+    margin: 10px;
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: -289px;
+  }
+}
+@media screen and (max-width: 600px) {
+  body {
+    background: #8bfff4;
+  }
+
+  .timeline ul li {
+    margin-left: 20px;
+  }
+  .timeline ul li div {
+    width: calc(100vw - 91px);
+  }
+  .timeline ul li:nth-of-type(even) > div {
+    left: 45px;
+  }
+}
+</style>
+</head>
+<body>
+<section class="timeline">
+    <ul>
+        <li>
+            <div>
+                <time>2020/11/04</time>
+                <div class="discovery">
+                    <h1>我们第一次相遇</h1>
+                    <p>
+                        A chance encounter
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>那节思修课</h1>
+                    <span>坐在我旁边的你</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2020/11/06</time>
+                <div class="discovery">
+                    <h1>我们一起做义工</h1>
+                    <p>
+                        The seed of love
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>深圳湾公园</h1>
+                    <span>那抹红色在你身上更美</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2020/11/11</time>
+                <div class="discovery">
+                    <h1>我们第三次散步</h1>
+                    <p>
+                        The heart beats restlessly
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>皎白月光下的你</h1>
+                    <span>不禁让我有些看呆</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2021/01/14</time>
+                <div class="discovery">
+                    <h1>傍晚散步</h1>
+                    <p>
+                        我们像情侣一样牵着手
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>那时我在想</h1>
+                    <span>希望时间能永远停留在这一刻</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2021/01/16</time>
+                <div class="discovery">
+                    <h1>终于在一起啦！</h1>
+                    <p>
+                        在我一次次表白失败的基础上
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>当时我的内心</h1>
+                    <span>是喜悦 也是沉重</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2021/02/03</time>
+                <div class="discovery">
+                    <h1>短暂的分别</h1>
+                    <p>
+                        长久的思念
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>本该短暂的寒假</h1>
+                    <span>却变得如此漫长且枯燥</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2021/03/06</time>
+                <div class="discovery">
+                    <h1>平淡的一天</h1>
+                    <p>
+                        却因你的笑容而变得深刻且难忘
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>鸟语、花香、你我</h1>
+                    <span>构成一幅美丽的画面</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2021/04/02</time>
+                <div class="discovery">
+                    <h1>第一次看电影</h1>
+                    <p>
+                        西游记之再世妖王
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>很怀念</h1>
+                    <span>那时吓着钻到我怀里的你</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2021/05/07</time>
+                <div class="discovery">
+                    <h1>我姐姐结婚</h1>
+                    <p>
+                        发自内心的喜悦与祝福
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>想着</h1>
+                    <span>什么时候你才能成为我的新娘？</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2021/10/03</time>
+                <div class="discovery">
+                    <h1>第一次旅行</h1>
+                    <p>
+                        上海、乌镇、杭州
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>勇敢且无畏</h1>
+                    <span>也象征着我们之间的爱情</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2022/01/19</time>
+                <div class="discovery">
+                    <h1>第一次去你家</h1>
+                    <p>
+                        慢慢期待以后有你的家
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>我做饭 你帮忙</h1>
+                    <span>我洗碗 你拖地</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div>
+                <time>2022/02/14</time>
+                <div class="discovery">
+                    <h1>有限的现在</h1>
+                    <p>
+                        与无限的未来
+                    </p>
+                </div>
+                <div class="scientist">
+                    <h1>我都会陪在你的身边</h1>
+                    <span>致我最爱的呆呆❤</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<script>
+var items = document.querySelectorAll(".timeline li");
+
+function isElementInViewport(el) {
+  var rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
+}
+
+function callbackFunc() {
+  for (var i = 0; i < items.length; i++) {
+    if (isElementInViewport(items[i])) {
+      if(!items[i].classList.contains("in-view")){
+        items[i].classList.add("in-view");
+      }
+    } else if(items[i].classList.contains("in-view")) {
+        items[i].classList.remove("in-view");
+    }
+  }
+}
+ 
+window.addEventListener("load", callbackFunc);
+window.addEventListener("scroll", callbackFunc);
+</script>
+
+</body>
+</html>
